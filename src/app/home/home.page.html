@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Shopping Items</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of shoppingItems">
+      <ion-label>{{ item.name }}</ion-label>
+      <ion-button (click)="selectItem(item)">Select</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngIf="selectedItem">
+    <ion-card-header>
+      <ion-card-title>{{ selectedItem.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="selectedItem.image"></ion-img>
+
+      <p>{{ selectedItem.items[0].name }}</p>
+      <p>{{ selectedItem.items[0].price }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
