@@ -1,0 +1,13 @@
+{
+  "name": "myapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://api.winnerheads.com/api/marketplace/getMarketplaceByIdString/winnerheads"
+    }
+  ]
+}
